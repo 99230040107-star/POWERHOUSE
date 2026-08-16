@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aster Hospitals | Multi-Specialty Hospital Network Across India</title>
+  <meta name="description" content="Aster Hospitals is a leading quaternary healthcare network in India providing 24/7 emergency trauma care, cardiac sciences, neurosciences, oncology, robotic surgery, organ transplants across Bangalore, Kochi, Calicut, Kottakkal, Kannur, Hyderabad, and Guntur." />
+  <meta name="keywords" content="Aster Hospitals, Aster CMI Bangalore, Aster Medcity Kochi, Aster Whitefield, Aster MIMS Calicut, Aster Prime Hyderabad, Cardiology, Oncology, Neurosciences, Organ Transplant, 24/7 Emergency Helpline" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://www.asterhospitals.in/sites/default/files/aster-hospitals-new.ico" type="image/x-icon" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- App Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/chatbot.css" />
+</head>
+<body>
+
+  <!-- ================= TOP EMERGENCY & CRAWLER STATUS BAR ================= -->
+  <div class="top-emergency-bar">
+    <div class="container">
+      <div class="emergency-bar-inner">
+        <div class="emergency-info">
+          <span class="pulse-badge">
+            <span class="pulse-dot"></span> 24/7 Emergency Care
+          </span>
+          <div class="emergency-numbers">
+            <span><strong>Bangalore (Hebbal):</strong> <a href="tel:08046474647" class="emergency-link"><i class="fa-solid fa-phone"></i> 080-4647 4647</a></span>
+            <span><strong>Kochi (Medcity):</strong> <a href="tel:155218" class="emergency-link"><i class="fa-solid fa-phone"></i> 155218</a></span>
+            <span><strong>Whitefield:</strong> <a href="tel:08045108888" class="emergency-link"><i class="fa-solid fa-phone"></i> 080-4510 8888</a></span>
+            <span><strong>Calicut:</strong> <a href="tel:04952488000" class="emergency-link"><i class="fa-solid fa-phone"></i> 0495-2488000</a></span>
+            <span><strong>Hyderabad:</strong> <a href="tel:04049594959" class="emergency-link"><i class="fa-solid fa-phone"></i> 040-4959 4959</a></span>
+          </div>
+        </div>
+        <div class="crawler-status-box">
+          <span id="crawler-status-indicator" class="crawler-status">
+            <i class="fa-solid fa-spider"></i> AI Knowledge Crawler Active
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN HEADER & NAVIGATION ================= -->
+  <header class="main-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#home" class="brand-logo-wrapper">
+          <div class="brand-emblem">
+            <i class="fa-solid fa-star-of-life"></i>
+          </div>
+          <div class="brand-text">
+            <h1>Aster Hospitals</h1>
+            <span>We'll Treat You Well</span>
+          </div>
+        </a>
+
+        <nav class="main-nav">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#specialties" class="nav-link">Specialties</a>
+          <a href="#doctors" class="nav-link">Find a Doctor</a>
+          <a href="#locations" class="nav-link">Our Hospitals</a>
+          <a href="#packages" class="nav-link">Health Packages</a>
+          <a href="#emergency" class="nav-link">Emergency 24/7</a>
+          <a href="#insurance" class="nav-link">Insurance & TPA</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="location-dropdown-btn" onclick="document.getElementById('locations').scrollIntoView({behavior: 'smooth'})">
+            <i class="fa-solid fa-location-dot"></i> <span id="header-current-location-text">Aster CMI Bangalore</span>
+          </button>
+          <button class="btn-primary" onclick="window.asterApp.openBookingModal()">
+            <i class="fa-regular fa-calendar-check"></i> Book Appointment
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO BANNER SECTION ================= -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <i class="fa-solid fa-shield-halved"></i> JCI & NABH Accredited Quaternary Care Network
+          </div>
+          <h1 class="hero-title">
+            World-Class Care, <span>8 Flagship Hospitals</span> & 24/7 Emergency.
+          </h1>
+          <p class="hero-desc">
+            Trusted by millions across India and GCC. Featuring South India's premier Multi-Organ Transplant Centers, TrueBeam Oncology, and Mako Robotic Orthopaedics in Bangalore, Kochi, Calicut, Hyderabad, and more.
+          </p>
+          <div class="hero-cta-group">
+            <button class="btn-hero-primary" onclick="window.asterApp.openBookingModal()">
+              <i class="fa-regular fa-calendar-check"></i> Book Doctor Appointment
+            </button>
+            <button class="btn-hero-bot" onclick="window.asterApp.chatbot.toggleChat(true)">
+              <i class="fa-solid fa-robot"></i> Ask Aster AI Assistant
+            </button>
+          </div>
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <h4>8+</h4>
+              <p>Quaternary Campuses</p>
+            </div>
+            <div class="stat-item">
+              <h4>3,000+</h4>
+              <p>Inpatient Beds</p>
+            </div>
+            <div class="stat-item">
+              <h4>1,000+</h4>
+              <p>Specialist Doctors</p>
+            </div>
+            <div class="stat-item">
+              <h4>95%+</h4>
+              <p>Transplant Success</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card-booking">
+          <div class="booking-card-header">
+            <h3><i class="fa-solid fa-bolt-lightning" style="color: var(--primary);"></i> Quick Doctor Booking</h3>
+            <p>Schedule an in-person or video consultation across any campus.</p>
+          </div>
+          <form onsubmit="event.preventDefault(); window.asterApp.handleHeroQuickBook();">
+            <div class="quick-form-group">
+              <label>Select Hospital Campus</label>
+              <select id="hero-quick-branch" onchange="window.asterApp.handleHeroBranchChange()">
+                <option value="bangalore-cmi">Aster CMI Hospital, Hebbal, Bangalore</option>
+                <option value="kochi-medcity">Aster Medcity, Kochi, Kerala</option>
+                <option value="bangalore-whitefield">Aster Whitefield Hospital, Bangalore</option>
+                <option value="calicut-mims">Aster MIMS Calicut, Kerala</option>
+                <option value="kottakkal-mims">Aster MIMS Kottakkal, Kerala</option>
+                <option value="kannur-mims">Aster MIMS Kannur, Kerala</option>
+                <option value="hyderabad-prime">Aster Prime Hospital, Hyderabad</option>
+                <option value="guntur-ramesh">Aster Ramesh Hospitals, Guntur</option>
+              </select>
+            </div>
+            <div class="quick-form-group">
+              <label>Select Specialty</label>
+              <select id="hero-quick-specialty">
+                <option value="Cardiac Sciences">Cardiac Sciences (Cardiology)</option>
+                <option value="Neurosciences">Neurosciences & Neurosurgery</option>
+                <option value="Oncology">Oncology & Cancer Care (AIIO)</option>
+                <option value="Orthopaedics">Orthopaedics & Robotic Joint Replacement</option>
+                <option value="Organ Transplant">Liver & Multi-Organ Transplant</option>
+                <option value="Gastroenterology">Gastroenterology & Hepatology</option>
+                <option value="Women & Child Care">Women & Child Care (Aster Nurture)</option>
+                <option value="Nephrology & Urology">Nephrology, Dialysis & Urology</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-submit-quick-book">
+              <i class="fa-solid fa-magnifying-glass"></i> Find Available Doctors
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CENTRES OF EXCELLENCE / SPECIALTIES ================= -->
+  <section id="specialties" class="specialties-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Clinical Excellence</span>
+        <h2 class="section-title">Centres of Excellence & Specialties</h2>
+        <p class="section-subtitle">
+          Leading medical departments powered by advanced surgical robotics, multidisciplinary tumor boards, and dedicated critical care units.
+        </p>
+      </div>
+
+      <div id="specialties-grid" class="specialties-grid">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FIND A DOCTOR DIRECTORY ================= -->
+  <section id="doctors" class="doctors-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Expert Physicians</span>
+        <h2 class="section-title">Find & Consult Top Doctors</h2>
+        <p class="section-subtitle">
+          Consult internationally trained surgeons, professors, and medical specialists across all Aster Hospital campuses.
+        </p>
+      </div>
+
+      <!-- Quick Hospital Filter Chips -->
+      <div class="hospital-filter-chips-container">
+        <span class="filter-chips-label"><i class="fa-solid fa-filter"></i> Filter by Hospital:</span>
+        <div class="hospital-chips-scroll" id="doctor-hospital-chips">
+          <button class="hospital-chip active" data-branch="all">All Hospitals (28)</button>
+          <button class="hospital-chip" data-branch="bangalore-cmi">Aster CMI Bangalore (8)</button>
+          <button class="hospital-chip" data-branch="calicut-mims">Aster MIMS Calicut (8)</button>
+          <button class="hospital-chip" data-branch="kochi-medcity">Aster Medcity Kochi (5)</button>
+          <button class="hospital-chip" data-branch="bangalore-whitefield">Aster Whitefield (3)</button>
+          <button class="hospital-chip" data-branch="hyderabad-prime">Aster Prime Hyderabad (2)</button>
+          <button class="hospital-chip" data-branch="guntur-ramesh">Aster Ramesh Guntur (1)</button>
+          <button class="hospital-chip" data-branch="kannur-mims">Aster MIMS Kannur (1)</button>
+        </div>
+      </div>
+
+      <div class="doctor-filter-bar">
+        <div class="filter-input-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="doctor-search-input" placeholder="Search doctor by name, specialty, disease, or hospital..." />
+        </div>
+        <select id="doctor-specialty-filter">
+          <option value="all">All Specialties</option>
+          <option value="Cardiac Sciences">Cardiac Sciences</option>
+          <option value="Neurosciences">Neurosciences</option>
+          <option value="Oncology">Oncology</option>
+          <option value="Orthopaedics">Orthopaedics</option>
+          <option value="Organ Transplant">Organ Transplant</option>
+          <option value="Gastroenterology">Gastroenterology</option>
+          <option value="Women & Child Care">Women & Child Care</option>
+          <option value="Nephrology & Urology">Nephrology & Urology</option>
+          <option value="Pulmonology">Pulmonology & Chest Medicine</option>
+        </select>
+        <select id="doctor-branch-filter">
+          <option value="all">All Hospital Campuses</option>
+          <option value="bangalore-cmi">Aster CMI Hospital, Bangalore</option>
+          <option value="calicut-mims">Aster MIMS Calicut</option>
+          <option value="kochi-medcity">Aster Medcity, Kochi</option>
+          <option value="bangalore-whitefield">Aster Whitefield, Bangalore</option>
+          <option value="hyderabad-prime">Aster Prime Hospital, Hyderabad</option>
+          <option value="guntur-ramesh">Aster Ramesh Hospitals, Guntur</option>
+          <option value="kannur-mims">Aster MIMS Kannur</option>
+        </select>
+        <select id="doctor-experience-filter">
+          <option value="all">All Experience Levels</option>
+          <option value="25">25+ Years (Senior Veterans)</option>
+          <option value="20">20+ Years Experience</option>
+          <option value="15">15+ Years Experience</option>
+        </select>
+        <select id="doctor-gender-filter">
+          <option value="all">All Genders</option>
+          <option value="Female">Female Specialists</option>
+          <option value="Male">Male Specialists</option>
+        </select>
+        <select id="doctor-sort-filter">
+          <option value="featured">Sort: Featured</option>
+          <option value="experience-high">Experience: Highest First</option>
+          <option value="rating-high">Rating: Highest First</option>
+          <option value="fee-low">Fee: Lowest First</option>
+          <option value="fee-high">Fee: Highest First</option>
+        </select>
+      </div>
+
+      <div id="doctors-grid" class="doctors-grid">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOSPITAL LOCATIONS & NETWORK ================= -->
+  <section id="locations" class="locations-section">
+    <div class="container">
+      <div class="section-header with-action">
+        <div>
+          <span class="section-tag">Hospital Network</span>
+          <h2 class="section-title">Our Hospitals Across India</h2>
+          <p class="section-subtitle">
+            Explore state-of-the-art quaternary care hospital campuses equipped with 24/7 Level-1 Emergency, ICU Ambulances, and full inpatient suites.
+          </p>
+        </div>
+        <div class="section-header-btn-box">
+          <button class="btn-secondary" onclick="window.asterApp.openComparisonModal()">
+            <i class="fa-solid fa-scale-balanced"></i> Compare Hospital Facilities
+          </button>
+        </div>
+      </div>
+
+      <!-- City / Region Filter Tabs -->
+      <div class="city-filter-tabs">
+        <button class="city-tab-btn active" data-region="all" onclick="window.asterApp.filterLocationsByRegion('all')">
+          <i class="fa-solid fa-building-circle-check"></i> All Campuses (8)
+        </button>
+        <button class="city-tab-btn" data-region="Bangalore" onclick="window.asterApp.filterLocationsByRegion('Bangalore')">
+          <i class="fa-solid fa-location-dot"></i> Bangalore (2)
+        </button>
+        <button class="city-tab-btn" data-region="Kerala" onclick="window.asterApp.filterLocationsByRegion('Kerala')">
+          <i class="fa-solid fa-water"></i> Kerala (4)
+        </button>
+        <button class="city-tab-btn" data-region="Telangana & AP" onclick="window.asterApp.filterLocationsByRegion('Telangana & AP')">
+          <i class="fa-solid fa-monument"></i> Telangana & AP (2)
+        </button>
+      </div>
+
+      <div id="locations-grid" class="locations-grid">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PREVENTIVE HEALTH CHECKUP PACKAGES ================= -->
+  <section id="packages" class="packages-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Preventive Healthcare</span>
+        <h2 class="section-title">Health Checkup Packages</h2>
+        <p class="section-subtitle">
+          Early detection is the best prevention. Select from comprehensive full-body screening and cardiac wellness packages.
+        </p>
+      </div>
+
+      <div id="packages-grid" class="packages-grid">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 24/7 EMERGENCY & TRAUMA SECTION ================= -->
+  <section id="emergency" class="specialties-section" style="background: #ffffff;">
+    <div class="container">
+      <div style="background: linear-gradient(135deg, #0B2545 0%, #164D92 100%); border-radius: var(--radius-lg); padding: 48px; color: #ffffff; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center;">
+        <div>
+          <span style="background: #DC2626; color: #ffffff; padding: 4px 12px; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">
+            <i class="fa-solid fa-truck-medical"></i> Immediate Emergency Care
+          </span>
+          <h2 style="font-family: var(--font-heading); font-size: 2.4rem; font-weight: 800; margin: 16px 0;">24/7 Emergency & Level-1 Trauma Bays</h2>
+          <p style="opacity: 0.9; font-size: 1.05rem; line-height: 1.6; margin-bottom: 24px;">
+            Rapid triage response teams for acute myocardial infarction (Code Blue), acute ischemic stroke (Door-to-needle thrombolysis under 45 mins), polytrauma, and pediatric emergencies across all hospital campuses.
+          </p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="tel:08046474647" class="btn-primary" style="background: #DC2626; border: none; font-size: 0.95rem; padding: 10px 18px;">
+              <i class="fa-solid fa-phone-volume"></i> Bangalore CMI: 080-4647 4647
+            </a>
+            <a href="tel:155218" class="btn-primary" style="background: #E11D48; border: none; font-size: 0.95rem; padding: 10px 18px;">
+              <i class="fa-solid fa-phone-volume"></i> Kochi Medcity: 155218
+            </a>
+            <a href="tel:04952488000" class="btn-primary" style="background: #B91C1C; border: none; font-size: 0.95rem; padding: 10px 18px;">
+              <i class="fa-solid fa-phone-volume"></i> Calicut MIMS: 0495-2488000
+            </a>
+            <a href="tel:04049594959" class="btn-primary" style="background: #991B1B; border: none; font-size: 0.95rem; padding: 10px 18px;">
+              <i class="fa-solid fa-phone-volume"></i> Hyderabad: 040-4959 4959
+            </a>
+          </div>
+        </div>
+        <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 24px; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.15);">
+          <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 14px; color: #38BDF8;"><i class="fa-solid fa-shield-heart"></i> Emergency Preparedness</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem;">
+            <li><i class="fa-solid fa-check" style="color: #10B981; margin-right: 8px;"></i> Flat-panel 24/7 Cath Labs ready for immediate angioplasty</li>
+            <li><i class="fa-solid fa-check" style="color: #10B981; margin-right: 8px;"></i> Stroke thrombolysis & mechanical thrombectomy</li>
+            <li><i class="fa-solid fa-check" style="color: #10B981; margin-right: 8px;"></i> 35+ ICU Ambulances with transport ventilators & defibrillators</li>
+            <li><i class="fa-solid fa-check" style="color: #10B981; margin-right: 8px;"></i> Dedicated Emergency Triage & Code Blue resuscitation teams</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INSURANCE & CASHLESS TPA ================= -->
+  <section id="insurance" class="packages-section" style="background: #F8FAFC;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Insurance Partners</span>
+        <h2 class="section-title">Cashless Hospitalization & TPA Empanelment</h2>
+        <p class="section-subtitle">
+          Aster Hospitals is empanelled with all major public, private health insurers and Third Party Administrators (TPAs).
+        </p>
+      </div>
+
+      <div style="background: #ffffff; border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-subtle); display: grid; grid-template-columns: 2fr 1fr; gap: 32px;">
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 12px;">Empanelled Insurers & TPAs</h3>
+          <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 16px;">
+            Enjoy seamless cashless admission and instant pre-authorization. Our dedicated 24/7 TPA Desk assists with document submission and query resolutions across all branches.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span class="procedure-tag" style="padding: 6px 12px; font-size: 0.85rem;">Star Health</span>
+            <span class="procedure-tag" style="padding: 6px 12px; font-size: 0.85rem;">HDFC ERGO</span>
+            <span class="procedure-tag" style="padding: 6px 12px; font-size: 0.85rem;">ICICI Lombard</span>
+            <span class="procedure-tag" style="padding: 6px 12px; font-size: 0.85rem;">Care Health</span>
+            <span class="procedure-tag" style="padding: 6px 12px; font-size: 0.85rem;">Niva Bupa</span>
+            <span class="procedure-tag" style="padding: 6px 12px; font-size: 0.85rem;">Bajaj Allianz</span>
+            <span class="procedure-tag" style="padding: 6px 12px; font-size: 0.85rem;">Tata AIG</span>
+            <span class="procedure-tag" style="padding: 6px 12px; font-size: 0.85rem;">Medi Assist TPA</span>
+            <span class="procedure-tag" style="padding: 6px 12px; font-size: 0.85rem;">Paramount TPA</span>
+            <span class="procedure-tag" style="padding: 6px 12px; font-size: 0.85rem;">Vidal Health TPA</span>
+            <span class="procedure-tag" style="padding: 6px 12px; font-size: 0.85rem;">FHPL TPA</span>
+            <span class="procedure-tag" style="padding: 6px 12px; font-size: 0.85rem;">Raksha TPA</span>
+          </div>
+        </div>
+        <div style="background: var(--primary-light); border-radius: 14px; padding: 20px;">
+          <h4 style="font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 8px;"><i class="fa-solid fa-headset"></i> 24/7 TPA Helpdesk</h4>
+          <p style="font-size: 0.85rem; color: var(--text-main); margin-bottom: 12px;">Contact our hospital TPA department for claim inquiries & pre-auth approvals:</p>
+          <div style="font-size: 0.95rem; font-weight: 800; color: var(--primary-dark); margin-bottom: 6px;">📞 080-4647 4444 (Ext: 1104)</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">📧 insurance.india@asterhospital.com</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= APPOINTMENT BOOKING MODAL ================= -->
+  <div id="appointment-modal" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3><i class="fa-regular fa-calendar-check"></i> Book Doctor Appointment</h3>
+        <button class="modal-close-btn" onclick="window.asterApp.closeBookingModal()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <form id="appointment-modal-form">
+        <div class="modal-body">
+          <div class="form-row-2">
+            <div class="quick-form-group">
+              <label>Patient Full Name</label>
+              <input type="text" id="modal-patient-name" placeholder="e.g. Rahul Sharma" required />
+            </div>
+            <div class="quick-form-group">
+              <label>Phone / WhatsApp No.</label>
+              <input type="tel" id="modal-patient-phone" placeholder="e.g. +91 9876543210" required />
+            </div>
+          </div>
+          <div class="form-row-2">
+            <div class="quick-form-group">
+              <label>Hospital Campus</label>
+              <select id="modal-hospital-select" onchange="window.asterApp.handleModalHospitalChange()">
+                <option value="bangalore-cmi">Aster CMI Hospital, Bangalore</option>
+                <option value="kochi-medcity">Aster Medcity, Kochi</option>
+                <option value="bangalore-whitefield">Aster Whitefield, Bangalore</option>
+                <option value="calicut-mims">Aster MIMS Calicut</option>
+                <option value="kottakkal-mims">Aster MIMS Kottakkal</option>
+                <option value="kannur-mims">Aster MIMS Kannur</option>
+                <option value="hyderabad-prime">Aster Prime Hospital, Hyderabad</option>
+                <option value="guntur-ramesh">Aster Ramesh Hospitals, Guntur</option>
+              </select>
+            </div>
+            <div class="quick-form-group">
+              <label>Department / Specialty</label>
+              <select id="modal-specialty-select" onchange="window.asterApp.handleModalSpecialtyChange()">
+                <option value="all">All Specialties</option>
+                <option value="Cardiac Sciences">Cardiac Sciences</option>
+                <option value="Neurosciences">Neurosciences</option>
+                <option value="Oncology">Oncology</option>
+                <option value="Orthopaedics">Orthopaedics</option>
+                <option value="Organ Transplant">Organ Transplant</option>
+                <option value="Gastroenterology">Gastroenterology</option>
+                <option value="Women & Child Care">Women & Child Care</option>
+                <option value="Nephrology & Urology">Nephrology & Urology</option>
+                <option value="Pulmonology">Pulmonology & Respiratory</option>
+              </select>
+            </div>
+          </div>
+          <div class="quick-form-group">
+            <label>Select Specialist</label>
+            <select id="modal-doctor-select">
+              <!-- Dynamically populated -->
+            </select>
+          </div>
+          <div class="form-row-2">
+            <div class="quick-form-group">
+              <label>Preferred Date</label>
+              <input type="date" id="modal-date-input" value="2026-08-16" required />
+            </div>
+            <div class="quick-form-group">
+              <label>Consultation Mode</label>
+              <select id="modal-mode-select">
+                <option value="in-person">Hospital OPD Visit</option>
+                <option value="video">Tele-Health Video Call</option>
+              </select>
+            </div>
+          </div>
+          <div class="quick-form-group">
+            <label>Reason / Symptoms (Optional)</label>
+            <input type="text" id="modal-reason-input" placeholder="e.g. Chest discomfort, second opinion, routine checkup" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-outline" onclick="window.asterApp.closeBookingModal()">Cancel</button>
+          <button type="submit" class="btn-primary"><i class="fa-solid fa-check"></i> Confirm Appointment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= HOSPITAL COMPARISON MODAL ================= -->
+  <div id="comparison-modal" class="modal-overlay">
+    <div class="modal-container modal-large">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-scale-balanced"></i> Hospital Infrastructure & Facilities Matrix</h3>
+        <button class="modal-close-btn" onclick="window.asterApp.closeComparisonModal()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 16px;">
+          Compare surgical robotics, organ transplant units, inpatient beds, and emergency triage capabilities across Aster Hospital campuses:
+        </p>
+        <div class="modal-table-scroll">
+          <table class="full-comparison-table">
+            <thead>
+              <tr>
+                <th>Infrastructure & Capability</th>
+                <th>Aster CMI (Bangalore)</th>
+                <th>Aster Medcity (Kochi)</th>
+                <th>Aster Whitefield (Blr)</th>
+                <th>Aster MIMS (Calicut)</th>
+                <th>Aster Prime (Hyderabad)</th>
+              </tr>
+            </thead>
+            <tbody id="comparison-table-body">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-primary" onclick="window.asterApp.closeComparisonModal()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= DOCTOR PERSONAL DETAILS & PROFILE MODAL ================= -->
+  <div id="doctor-details-modal" class="modal-overlay">
+    <div class="modal-container modal-large doctor-profile-modal-box">
+      <div class="modal-header">
+        <div class="doc-modal-header-title">
+          <i class="fa-solid fa-id-card-clip"></i>
+          <span>Doctor Personal Profile & Verified Credentials</span>
+        </div>
+        <button class="modal-close-btn" onclick="window.asterApp.closeDoctorModal()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body" id="doctor-details-modal-body">
+        <!-- Dynamically injected doctor resume and personal details -->
+      </div>
+      <div class="modal-footer" id="doctor-details-modal-footer">
+        <!-- Action buttons -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo-wrapper" style="margin-bottom: 16px;">
+            <div class="brand-emblem" style="width: 36px; height: 36px; font-size: 1.2rem;">
+              <i class="fa-solid fa-star-of-life"></i>
+            </div>
+            <div class="brand-text">
+              <h1 style="color: #ffffff; font-size: 1.25rem;">Aster Hospitals</h1>
+              <span style="color: #38BDF8;">We'll Treat You Well</span>
+            </div>
+          </div>
+          <p>Aster DM Healthcare is one of the largest healthcare networks in India and GCC, delivering trusted clinical care across multispecialty domains for over 36 years.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Centres of Excellence</h4>
+          <ul class="footer-links">
+            <li><a href="#specialties">Cardiac Sciences</a></li>
+            <li><a href="#specialties">Neurosciences</a></li>
+            <li><a href="#specialties">Aster Institute of Oncology</a></li>
+            <li><a href="#specialties">Orthopaedics & Joint Replacement</a></li>
+            <li><a href="#specialties">Multi-Organ Transplant</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hospital Network</h4>
+          <ul class="footer-links">
+            <li><a href="#locations">Aster CMI Bangalore</a></li>
+            <li><a href="#locations">Aster Medcity Kochi</a></li>
+            <li><a href="#locations">Aster Whitefield Bangalore</a></li>
+            <li><a href="#locations">Aster MIMS Calicut</a></li>
+            <li><a href="#locations">Aster Prime Hyderabad</a></li>
+            <li><a href="#locations">Aster Ramesh Hospitals Guntur</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>24/7 Helplines</h4>
+          <p><strong>Centralised Helpline:</strong> 1800 102 4647</p>
+          <p><strong>Bangalore Emergency:</strong> 080-4647 4647</p>
+          <p><strong>Kochi Emergency:</strong> 155218</p>
+          <p><strong>Email:</strong> customercare.india@asterhospital.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Aster DM Healthcare. All Rights Reserved.</span>
+        <span>JCI, NABH & NABL Accredited Healthcare Network.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= DOCKED BOTTOM-RIGHT AI CHATBOT WIDGET ================= -->
+  <div id="aster-chatbot-wrapper" class="aster-chatbot-wrapper">
+
+    <!-- Floating Trigger Button -->
+    <button id="chatbot-trigger-btn" class="chatbot-trigger-btn" aria-label="Ask Aster AI Assistant">
+      <span class="trigger-pulse-ring"></span>
+      <span class="chatbot-unread-badge" id="chatbot-unread-badge">1</span>
+      <i class="fa-solid fa-comment-medical trigger-icon-chat"></i>
+      <i class="fa-solid fa-xmark trigger-icon-close"></i>
+    </button>
+    <div class="chatbot-tooltip">Ask Aster AI Assistant</div>
+
+    <!-- Main Chatbot Container -->
+    <div id="aster-chatbot-container" class="aster-chatbot-container">
+      
+      <!-- Chatbot Header -->
+      <div class="chatbot-header">
+        <div class="bot-header-left">
+          <div class="bot-avatar-header">
+            <i class="fa-solid fa-user-doctor"></i>
+          </div>
+          <div class="bot-header-info">
+            <h3>Aster AI Assistant</h3>
+            <span id="bot-header-status" class="bot-header-status">
+              <span class="status-dot"></span> Online • 8 Campuses Indexed
+            </span>
+          </div>
+        </div>
+        <div class="bot-header-actions">
+          <button id="btn-chatbot-maximize" class="btn-header-action" title="Toggle Fullscreen" onclick="window.asterApp.chatbot.toggleMaximize()">
+            <i class="fa-solid fa-expand"></i>
+          </button>
+          <button class="btn-header-action" title="Clear Chat History" onclick="window.asterApp.chatbot.clearChat()">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+          <button class="btn-header-action" title="Close" onclick="window.asterApp.chatbot.toggleChat(false)">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Chat Assistant View -->
+      <div id="chatbot-chat-view" class="chatbot-chat-view">
+        <div id="chat-messages-list" class="chat-messages-list">
+          <!-- Messages dynamically injected -->
+        </div>
+
+        <div class="chatbot-input-footer">
+          <div class="input-container-inner">
+            <input type="text" id="chat-input" class="chat-input-field" placeholder="Ask about doctors, hospitals, emergency, packages..." autocomplete="off" />
+            <div class="input-actions">
+              <button id="btn-voice-input" class="btn-input-action btn-voice" title="Voice Input" onclick="window.asterApp.chatbot.toggleVoiceInput()">
+                <i class="fa-solid fa-microphone"></i>
+              </button>
+              <button id="btn-send-message" class="btn-input-action btn-send" title="Send" onclick="window.asterApp.chatbot.handleSendMessage()">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+          <div class="input-helper-text">
+            Autonomous RAG Engine • Powered by Aster Multi-Hospital Network Index
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="scripts/app.js"></script>
+</body>
+</html>
